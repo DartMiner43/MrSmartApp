@@ -1,0 +1,43 @@
+<section class="main">
+    <div class="container">
+        <div class="main__inner">
+            <h1 class="main__title">
+                Профиль
+            </h1>
+            <div class="main__line"></div>
+            <div class="profile__inner">
+                <img class="profile__image" src="images/person-profile.png" alt="">
+                <div class="profile__right">
+                    <form action="/updateInfo" method="post" class="profile__form">
+                        <div class="profile__item">
+                            <label class=profile__label>Имя пользователя:</label>
+                            <input type="text" class="profile__input" id="username" name="username" readonly value="<%= data[0].name %>">
+                        </div>
+                        <div class="profile__item">
+                            <label class=profile__label>Электронная почта:</label>
+                            <input type="email" class="profile__input" id="email" name="email" readonly value="<%= data[0].email %>">
+                        </div>
+                        <div class="profile__item">
+                            <label class=profile__label>Пароль:</label>
+                            <input type="password" class="profile__input" minlength="8" id="password" name="password" value="">
+                        </div>
+                        <div class="profile__item">
+                            <label class=profile__label>Повторите пароль:</label>
+                            <input type="password" class="profile__input" minlength="8" id="password2" name="password2" value="">
+                        </div>
+                        <div class="profile__item" style="display:none;">
+                            <label class=profile__label>Id:</label>
+                            <input type="text" class="profile__input" id="id" name="id" value="<%= data[0]._id %>">
+                        </div>                        
+                        <input type="submit"  class='profile__update-btn' id="profile__change-btn" value="Обновить">
+                        <button type="submit" formaction="/profileExit" formmethod="post" class="profile__exit-btn" id="profile__exit-btn">Выход</button>                     
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+<script>
+     alert("Данные были успешно обновлены!");
+</script>

@@ -1,0 +1,19 @@
+<section class="main">
+    <div class="container">
+        <div class="main__inner">
+            <h1 class="main__title">
+                <%= Theorydata.title %>
+            </h1>
+            <div class="main__line"></div>
+            <div class="class__inner">
+                <%- Theorydata.body %>
+            
+                <form action="/theoryStatsUpdate" method="post" class="class__return-btn-inner">
+                    <input style='display:none;' type="text" id='count' name='count' readonly value="<%= data[0].lessonComplete %>">
+                    <button type="submit" formaction="/theoryStatsUpdate" formmethod="post" class="class__return-btn">Назад</button>
+                </form>                
+                           
+            </div>
+        </div>      
+    </div>
+</section> 
